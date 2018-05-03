@@ -28,8 +28,5 @@ class VK:
         members = self._tools.get_all('groups.getMembers', max_count=1000,
                                       values=dict(group_id=group_id, fields=['first_name', 'last_name'])
                                       )
-        result = {-group_id: {'first_name': 'Кабань', 'last_name': '&Ко'}}
-        for i in members:
-            result[i[id]] = User(**i)
         return members
 
